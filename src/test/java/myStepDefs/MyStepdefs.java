@@ -71,7 +71,7 @@ public class MyStepdefs {
 
         }
 
-        if (username.equals("long")) {
+        if (username.equals("tooLong")) {
 
             enterUser.sendKeys("randomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomString");
         }
@@ -102,14 +102,13 @@ public class MyStepdefs {
 
     @Then("I can {string} an account")
     public void iCanAnAccount(String createAccount) throws InterruptedException {
-        WebElement button = driver.findElement(By.id("create-account-enabled"));
-        button.click();
+
 
         if (createAccount.equals("yes")) {
-            wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='lastUnit size1of1']")));
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='margin-bottom--lv5']")));
 
-            String actual = driver.getTitle();
-                   String expected = "Success | Mailchimp";
+                   String actual = driver.findElement(By.cssSelector("[class='!margin-bottom--lv3 no-transform center-on-medium ']")).getText();
+                   String expected = "Check your email";
 
 
                    assertEquals(expected, actual);
