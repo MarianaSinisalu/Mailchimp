@@ -12,6 +12,7 @@ Feature: Mailchimp
   Examples:
     | browser | email                    | username | password      | create |
     | chrome  | arianasinisalu@gmail.com | newName  | marianaJunx5! | yes    |
-    | safari  | arianasinisalu@gmail.com | long     | marianaJunx5! | no     |
+    | chrome  | arianasinisalu@gmail.com | tooLong  | marianaJunx5! | no     |
     | safari  | arianasinisalu@gmail.com | taken    | marianaJunx5! | no     |
     | chrome  |                          | newName  | marianaJunx5! | no     |
+

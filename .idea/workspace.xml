@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="337d9f4d-63c9-49ca-8cc3-8e0a9bbc5876" name="Changes" comment="Mailchimp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/myStepDefs/MyStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myStepDefs/MyStepdefs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/features/Mailchimp.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/Mailchimp.feature" afterDir="false" />
     </list>
@@ -53,7 +52,7 @@
       <recent name="signUp" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Sign up -  - Example n°1">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Sign up">
     <configuration name="Feature: Mailchimp" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Mailchimp.feature" />
@@ -115,8 +114,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Cucumber Java.Scenario: Sign up -  - Example n°1" />
         <item itemvalue="Cucumber Java.Scenario: Sign up" />
+        <item itemvalue="Cucumber Java.Scenario: Sign up -  - Example n°1" />
         <item itemvalue="Cucumber Java.Feature: Mailchimp" />
       </list>
     </recent_temporary>
@@ -136,7 +135,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1678797881647</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Mailchimp">
+      <created>1679654061497</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1679654061497</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,7 +164,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/myStepDefs/MyStepdefs.java</url>
-          <line>29</line>
+          <line>30</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 import java.util.Date;
 import java.util.Random;
+import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -49,12 +50,15 @@ public class MyStepdefs {
     public void iHaveEmailAddressString(String email) {
         waitSendKeys(driver, By.id(("email")), email);
 
+
     }
-    private void waitSendKeys(WebDriver driver,By by, String text) {
+
+    private void waitSendKeys(WebDriver driver, By by, String text) {
         wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(by));
         element.sendKeys(text);
     }
+
     @When("I have {string}")
     public void iHaveNewUsername(String username) {
         WebElement enterUser = driver.findElement(By.cssSelector("#new_username"));
@@ -82,54 +86,49 @@ public class MyStepdefs {
     public void iHaveEnteredPasswordString(String password) {
         WebElement enterPassword = driver.findElement(By.id("new_password"));
         enterPassword.sendKeys(password);
-        
 
-        
 
     }
 
     @When("I click Sign Up")
-    public void iClickSignUp() {
+    public void iClickSignUp() throws InterruptedException {
         WebElement button = driver.findElement(By.id("create-account-enabled"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)", "");
         button.click();
 
+
     }
 
     @Then("I can {string} an account")
-    public void iCanAnAccount(String createAccount)   {
+    public void iCanAnAccount(String createAccount) throws InterruptedException {
+        WebElement button = driver.findElement(By.id("create-account-enabled"));
+        button.click();
 
-         if (createAccount.equals("yes")) {
-             
-               if(driver.findElement(By.xpath("/html/body/div/div/div[2]")).isDisplayed()) {
+        if (createAccount.equals("yes")) {
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='lastUnit size1of1']")));
 
-                       String actual = driver.getTitle();
-                       String expected = "Signup | Mailchimp";
-
-                       assertEquals(expected, actual);
-               } else {
-
-                   wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-                   wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='!margin-bottom--lv3 no-transform center-on-medium']")));
-
-                   String actual = driver.findElement(By.cssSelector("[class='!margin-bottom--lv3 no-transform center-on-medium'")).getText();
-                   String expected = "Check your email";
+            String actual = driver.getTitle();
+                   String expected = "Success | Mailchimp";
 
 
                    assertEquals(expected, actual);
                }
-        }else if(createAccount.equalsIgnoreCase("no")){
+
+        else if(createAccount.equalsIgnoreCase("no")){
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='invalid-error']")));
+            String errorMessage = driver.findElement(By.cssSelector("[class='invalid-error']")).getText();
+            System.out.println(errorMessage);
+
             String actual = driver.getTitle();
             String expected = "Signup | Mailchimp";
 
             assertEquals(expected, actual);
         }
 
-
-
     }
 }
+
 
 
 
