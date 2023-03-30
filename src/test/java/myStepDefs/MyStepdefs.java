@@ -91,7 +91,7 @@ public class MyStepdefs {
     }
 
     @When("I click Sign Up")
-    public void iClickSignUp() throws InterruptedException {
+    public void iClickSignUp()  {
         WebElement button = driver.findElement(By.id("create-account-enabled"));
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)", "");
@@ -101,7 +101,7 @@ public class MyStepdefs {
     }
 
     @Then("I can {string} an account")
-    public void iCanAnAccount(String createAccount) throws InterruptedException {
+    public void iCanAnAccount(String createAccount)  {
 
 
         if (createAccount.equals("yes")) {
