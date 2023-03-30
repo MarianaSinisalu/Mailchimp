@@ -73,7 +73,7 @@ public class MyStepdefs {
 
         if (username.equals("tooLong")) {
 
-            enterUser.sendKeys("randomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomString");
+            enterUser.sendKeys("randomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomString");
         }
 
         if (username.equals("taken")) {
@@ -114,15 +114,27 @@ public class MyStepdefs {
                    assertEquals(expected, actual);
                }
 
-        else if(createAccount.equalsIgnoreCase("no")){
+         if(createAccount.equalsIgnoreCase("no")){
             wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='invalid-error']")));
-            String errorMessage = driver.findElement(By.cssSelector("[class='invalid-error']")).getText();
-            System.out.println(errorMessage);
+            String actual = driver.findElement(By.cssSelector("[class='invalid-error']")).getText();
+            if(actual.equalsIgnoreCase("An email address must contain a single @.")) {
+                String expected = "An email address must contain a single @.";
+                assertEquals(expected, actual);
+            }if(actual.equalsIgnoreCase("Great minds think alike - someone already has this username.")){
+                String expected = "Great minds think alike - someone already has this username.";
+                 assertEquals(expected, actual);
+             }
+            if(actual.equalsIgnoreCase("Enter a value less than 100 characters long")){
+                String expected = "Enter a value less than 100 characters long";
+                assertEquals(expected, actual);
+            }
 
-            String actual = driver.getTitle();
-            String expected = "Signup | Mailchimp";
+            System.out.println(actual);
 
-            assertEquals(expected, actual);
+            String actual1 = driver.getTitle();
+            String expected1 = "Signup | Mailchimp";
+
+            assertEquals(expected1, actual1);
         }
 
     }
