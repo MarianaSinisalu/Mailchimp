@@ -96,6 +96,7 @@ public class MyStepdefs {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollBy(0,500)", "");
         button.click();
+        button.click();
 
 
     }
