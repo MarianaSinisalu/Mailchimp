@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="337d9f4d-63c9-49ca-8cc3-8e0a9bbc5876" name="Changes" comment="Mailchimp">
-      <change beforePath="$PROJECT_DIR$/src/test/java/myStepDefs/MyStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myStepDefs/MyStepdefs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +163,13 @@
       <option name="presentableId" value="LOCAL−00006" />
       <updated>1680176512699</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL−00007" summary="Mailchimp">
+      <created>1680176820965</created>
+      <option name="number" value="LOCAL−00007" />
+      <option name="presentableId" value="LOCAL−00007" />
+      <updated>1680176820965</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

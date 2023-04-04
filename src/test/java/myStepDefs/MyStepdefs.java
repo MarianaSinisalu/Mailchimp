@@ -7,14 +7,11 @@ import io.cucumber.java.en.When;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.safari.SafariDriver;
-import org.openqa.selenium.safari.SafariOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
-import java.util.Date;
 import java.util.Random;
-import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
