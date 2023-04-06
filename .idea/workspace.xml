@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="337d9f4d-63c9-49ca-8cc3-8e0a9bbc5876" name="Changes" comment="Mailchimp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/myStepDefs/MyStepdefs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/myStepDefs/MyStepdefs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +51,7 @@
       <recent name="signUp" />
     </key>
   </component>
-  <component name="RunManager" selected="Cucumber Java.Scenario: Sign up">
+  <component name="RunManager" selected="Cucumber Java.Scenario: Sign up -  - Example n°2">
     <configuration name="Feature: Mailchimp" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Mailchimp.feature" />
@@ -90,6 +91,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Scenario: Sign up -  - Example n°2" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="5" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Mailchimp.feature:15" />
+      <option name="GLUE" value="myStepDefs" />
+      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
+      <module name="Mailchimp" />
+      <option name="NAME_FILTER" value="^Sign up$" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Sign up$&quot;" />
+      <option name="SUGGESTED_NAME" value="Scenario: Sign up -  - Example n°2" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.cucumber.core.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Scenario: Sign up" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/Mailchimp.feature" />
@@ -112,6 +133,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Cucumber Java.Scenario: Sign up -  - Example n°2" />
         <item itemvalue="Cucumber Java.Scenario: Sign up" />
         <item itemvalue="Cucumber Java.Scenario: Sign up -  - Example n°1" />
         <item itemvalue="Cucumber Java.Feature: Mailchimp" />
@@ -169,7 +191,13 @@
       <option name="presentableId" value="LOCAL−00007" />
       <updated>1680176820965</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL−00008" summary="Mailchimp">
+      <created>1680633485861</created>
+      <option name="number" value="LOCAL−00008" />
+      <option name="presentableId" value="LOCAL−00008" />
+      <updated>1680633485861</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -69,9 +69,17 @@ public class MyStepdefs {
         }
 
         if (username.equals("tooLong")) {
+            int length = 105;
+            String charSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            String longUsername = "";
 
-            enterUser.sendKeys("randomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomStringrandomString");
-        }
+            for (int i = 0; i < length; i++) {
+
+                longUsername += charSet.charAt((int) (Math.random() * charSet.length()));
+    }
+
+            enterUser.sendKeys(longUsername);
+}
 
         if (username.equals("taken")) {
             enterUser.sendKeys("maria");
@@ -115,12 +123,14 @@ public class MyStepdefs {
          if(createAccount.equalsIgnoreCase("no")){
             wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("[class='invalid-error']")));
             String actual = driver.findElement(By.cssSelector("[class='invalid-error']")).getText();
-            if(actual.equalsIgnoreCase("An email address must contain a single @.")) {
+
+
+             if(actual.equalsIgnoreCase("An email address must contain a single @.")) {
                 String expected = "An email address must contain a single @.";
                 assertEquals(expected, actual);
             }if(actual.equalsIgnoreCase("Great minds think alike - someone already has this username.")){
                 String expected = "Great minds think alike - someone already has this username.";
-                 assertEquals(expected, actual);
+                assertEquals(expected, actual);
              }
             if(actual.equalsIgnoreCase("Enter a value less than 100 characters long")){
                 String expected = "Enter a value less than 100 characters long";
